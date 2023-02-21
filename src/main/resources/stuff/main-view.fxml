@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="stuff.MainController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Button fx:id="btn01" text="Word Reversal" onAction="#progWordReversal"/>
+    <Button fx:id="btn02" text="Find the Word" onAction="#progWordReversal"/>
+    <Button fx:id="btn03" text="Word Search" onAction="#progWordReversal"/>
+    <Button fx:id="btn04" text="Anagrams" onAction="#progWordReversal"/>
+    <Button fx:id="btn05" text="Pangrams" onAction="#progWordReversal"/>
+    <Button fx:id="btn06" text="Number Reversal" onAction="#progWordReversal"/>
+    <Button fx:id="btn07" text="Armstrong Numbers" onAction="#progWordReversal"/>
+    <Button fx:id="btn08" text="Product Maximizer" onAction="#progWordReversal"/>
+    <Button fx:id="btn09" text="Prime Number Checker" onAction="#progWordReversal"/>
+    <Button fx:id="btn10" text="Prime Factorization" onAction="#progWordReversal"/>
+    <Label text="Challenges taken from:https://www.codecademy.com/resources/blog/java-code-challenges-for-beginners/"/>
+
+</VBox>
