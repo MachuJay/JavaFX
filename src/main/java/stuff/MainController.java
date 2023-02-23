@@ -17,7 +17,7 @@ public class MainController {
     // Instantiate New Stage then Hide Main Stage
     public void loadWindow(String xmlfile, String title) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApp.class.getResource(xmlfile));
-        Scene scene = new Scene(fxmlLoader.load(), 329, 240);
+        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         Stage tempstage = new Stage();
         tempstage.setTitle("Java Refresher Program");
         tempstage.setResizable(false);

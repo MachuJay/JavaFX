@@ -2,25 +2,61 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="stuff.MainController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
-
-    <Button fx:id="btn01" text="Word Reversal" onAction="#progWordReversal"/>
-    <Button fx:id="btn02" text="Find the Word" onAction="#progWordReversal"/>
-    <Button fx:id="btn03" text="Word Search" onAction="#progWordReversal"/>
-    <Button fx:id="btn04" text="Anagrams" onAction="#progWordReversal"/>
-    <Button fx:id="btn05" text="Pangrams" onAction="#progWordReversal"/>
-    <Button fx:id="btn06" text="Number Reversal" onAction="#progWordReversal"/>
-    <Button fx:id="btn07" text="Armstrong Numbers" onAction="#progWordReversal"/>
-    <Button fx:id="btn08" text="Product Maximizer" onAction="#progWordReversal"/>
-    <Button fx:id="btn09" text="Prime Number Checker" onAction="#progWordReversal"/>
-    <Button fx:id="btn10" text="Prime Factorization" onAction="#progWordReversal"/>
-    <Label text="Challenges taken from:https://www.codecademy.com/resources/blog/java-code-challenges-for-beginners/"/>
-
+<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml" fx:controller="stuff.MainController"
+      maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="168.0" prefWidth="600.0">
+    <children>
+        <GridPane hgap="4.0" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="400.0">
+            <columnConstraints>
+                <ColumnConstraints minWidth="150.0" hgrow="SOMETIMES" />
+                <ColumnConstraints minWidth="280.0" hgrow="SOMETIMES" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="btn01" text="Word Reversal" onAction="#progWordReversal" GridPane.rowIndex="0" GridPane.columnSpan="2147483647"/>
+                <Label GridPane.rowIndex="0" GridPane.columnIndex="1" text="Reverse words order."/>
+                <Button fx:id="btn02" text="Find the Word" onAction="#progWordReversal" GridPane.rowIndex="1" GridPane.columnSpan="2147483647"/>
+                <Label GridPane.rowIndex="1" GridPane.columnIndex="1" text="Retrieve specific word instance."/>
+                <Button fx:id="btn03" text="Word Search" onAction="#progWordReversal" GridPane.rowIndex="2" GridPane.columnSpan="2147483647"/>
+                <Label GridPane.rowIndex="2" GridPane.columnIndex="1" text="Retrieve repeated word instances."/>
+                <Button fx:id="btn04" text="Anagrams" onAction="#progWordReversal" GridPane.rowIndex="3" GridPane.columnSpan="2147483647"/>
+                <Label GridPane.rowIndex="3" GridPane.columnIndex="1" text="Check for mirrored characters use."/>
+                <Button fx:id="btn05" text="Pangrams" onAction="#progWordReversal" GridPane.rowIndex="4" GridPane.columnSpan="2147483647"/>
+                <Label GridPane.rowIndex="4" GridPane.columnIndex="1" text="Check for entire alphabet's characters use."/>
+                <Button fx:id="btn06" text="Number Reversal" onAction="#progWordReversal" GridPane.rowIndex="5" GridPane.columnSpan="2147483647"/>
+                <Label GridPane.rowIndex="5" GridPane.columnIndex="1" text="Reverse order of number's digits."/>
+                <Button fx:id="btn07" text="Armstrong Numbers" onAction="#progWordReversal" GridPane.rowIndex="6" GridPane.columnSpan="2147483647"/>
+                <Label GridPane.rowIndex="6" GridPane.columnIndex="1" text="Check for Armstrong number validity."/>
+                <Button fx:id="btn08" text="Product Maximizer" onAction="#progWordReversal" GridPane.rowIndex="7" GridPane.columnSpan="2147483647"/>
+                <Label GridPane.rowIndex="7" GridPane.columnIndex="1" text="Return pair of numbers with highest product."/>
+                <Button fx:id="btn09" text="Prime Number Checker" onAction="#progWordReversal" GridPane.rowIndex="8" GridPane.columnSpan="2147483647"/>
+                <Label GridPane.rowIndex="8" GridPane.columnIndex="1" text="Check validity and return a set of prime numbers."/>
+                <Button fx:id="btn10" text="Prime Factorization" onAction="#progWordReversal" GridPane.rowIndex="9" GridPane.columnSpan="2147483647"/>
+                <Label GridPane.rowIndex="9" GridPane.columnIndex="1" text="Return set of divisible factors."/>
+            </children>
+        </GridPane>
+        <HBox maxWidth="-Infinity" spacing="3.0">
+            <children>
+                <Label text="Challenges taken from: https://www.codecademy.com/resources/blog/java-code-challenges-for-beginners/"/>
+            </children>
+        </HBox>
+    </children>
 </VBox>
