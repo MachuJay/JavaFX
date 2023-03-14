@@ -17,7 +17,7 @@ public class MainApp extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApp.class.getResource("main-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 640, 480);
         MainStage.setTitle("Java Refresher Program");
-        MainStage.setResizable(false);
+        //MainStage.setResizable(false);
         MainStage.setScene(scene);
         MainStage.show();
     }

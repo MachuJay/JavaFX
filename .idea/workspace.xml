@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b071d391-b858-4e69-870b-510f777fccb2" name="Changes" comment="Implemented subprograms' windows closing/main window stage calls">
-      <change afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stuff/images/title.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stuff/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stuff/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stuff/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stuff/MainController.java" afterDir="false" />
@@ -20,11 +20,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -61,6 +61,13 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Daryl Mallari\IdeaProjects\JavaFX\src\main\java\stuff\images" />
+      <recent name="C:\Users\Daryl Mallari\IdeaProjects\JavaFX\src\main\java\stuff" />
+      <recent name="C:\Users\Daryl Mallari\IdeaProjects\JavaFX\src\images" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="stuff.MainApp" />
@@ -97,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678669798741</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implemented subprograms' windows closing/main window stage calls">
+      <created>1678699882855</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678699882855</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
