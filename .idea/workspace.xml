@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b071d391-b858-4e69-870b-510f777fccb2" name="Changes" comment="Title Image Added for Main Menu">
+    <list default="true" id="b071d391-b858-4e69-870b-510f777fccb2" name="Changes" comment="Initialized Subprogram 1 Structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stuff/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stuff/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stuff/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stuff/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stuff/images/title.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/title.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/stuff/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stuff/main-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stuff/prog01-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stuff/prog01-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,14 +128,33 @@
       <option name="project" value="LOCAL" />
       <updated>1678763263758</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Title Image Added for Main Menu">
+      <created>1678797738865</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678797738865</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initialized cloning of repository into another device" />
     <MESSAGE value="Implemented subprograms' windows closing/main window stage calls" />
     <MESSAGE value="Completed Main Menu Nodes Formatting; Image Loading Error" />
     <MESSAGE value="Title Image Added for Main Menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Title Image Added for Main Menu" />
+    <MESSAGE value="Initialized Subprogram 1 Structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initialized Subprogram 1 Structure" />
   </component>
 </project>

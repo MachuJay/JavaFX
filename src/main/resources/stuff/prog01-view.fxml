@@ -3,18 +3,34 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.TilePane?>
 
-<TilePane xmlns:fx="http://javafx.com/fxml" fx:controller="stuff.MainController">
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<VBox alignment="center" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml" fx:controller="stuff.MainController"
+      maxHeight="Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="168.0" prefWidth="600.0">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0"/>
     </padding>
 
-    <Button fx:id="btn01" text="Word Reversal"
-        />
-    <Label text="Challenges taken from:https://www.codecademy.com/resources/blog/java-code-challenges-for-beginners/"
-        />
+    <Label text="Enter a phrase:" />
 
-    <Button fx:id="closeButton" onAction="#closeButtonAction" text="Back"
-        />
-</TilePane>
+    <TextField fx:id="p01field"/>
+
+    <Button fx:id="btn01" onAction="#prog01"
+        text="Reverse"/>
+
+    <TextArea fx:id="p01area"
+        editable="false"
+        mouseTransparent="true"
+        focusTraversable="false"/>
+
+    <AnchorPane>
+        <Button fx:id="closeButton" onAction="#closeButtonAction"
+                text="Back"
+                AnchorPane.bottomAnchor="0.0"
+                AnchorPane.rightAnchor="0.0" />
+    </AnchorPane>
+
+</VBox>

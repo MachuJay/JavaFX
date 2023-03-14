@@ -2,21 +2,28 @@ package stuff;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.image.Image;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
-public class MainController implements Initializable {
+public class MainController {
 
     @FXML
     private Button btn01, btn02, btn03, btn04, btn05, btn06, btn07, btn08, btn09, btn10;
+
+    @FXML
+    private TextField p01field;
+
+    @FXML
+    private TextArea p01area;
+
+    @FXML
+    private ImageView imageView;
 
     // Instantiate New Stage then Hide Main Stage
     public void loadWindow(String xmlfile, String title) throws IOException {
@@ -42,14 +49,9 @@ public class MainController implements Initializable {
         stage.close();
     }
 
-    // Load Image Files
-    @FXML
-    private ImageView imageView;
+    // Secondary Programs' Execution Buttons
+    private void prof01(){
 
-    // Load Image From Resources Folder
-    @Override
-    public void initialize (URL location, ResourceBundle resources) {
-        imageView.setImage(new Image(("title.png")));
     }
 
     // Load Secondary Programs' Windows
