@@ -4,15 +4,17 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
 import java.io.IOException;
 
 public class MainController {
 
     @FXML
     private Button btn01, btn02, btn03, btn04, btn05, btn06, btn07, btn08, btn09, btn10;
+    @FXML
+    private ImageView imageView;
 
     // Instantiate New Stage then Hide Main Stage
     public void loadWindow(String xmlfile, String title) throws IOException {
