@@ -10,6 +10,7 @@ public class MainApp extends Application {
 
     private static Stage MainStage;
 
+    // Initialize and Display Main Window
     @Override
     public void start(Stage stage) throws IOException {
         setMainStage(stage);
