@@ -34,7 +34,7 @@
 
     <Label text="Enter a phrase:" />
 
-    <TextField fx:id="p01field"/>
+    <TextField fx:id="subField01"/>
 
     <GridPane>
         <columnConstraints>
@@ -42,7 +42,7 @@
             <ColumnConstraints percentWidth="33.0" prefWidth="100.0" hgrow="ALWAYS" />
             <ColumnConstraints percentWidth="34.0" hgrow="ALWAYS" />
         </columnConstraints>
-        <Button fx:id="p01btn01" onAction="#p01reverse"
+        <Button fx:id="subButton01" onAction="#p01reverse"
                 text="Reverse"
                 GridPane.halignment="CENTER"
                 GridPane.columnSpan="1"
@@ -54,7 +54,7 @@
                 GridPane.columnIndex="2"/>
     </GridPane>
 
-    <TextArea fx:id="p01area"
+    <TextArea fx:id="subArea01"
               editable="false"
               mouseTransparent="true"
               focusTraversable="false"/>

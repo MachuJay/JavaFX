@@ -21,13 +21,13 @@ public class MainController {
     private Button closeButton, resetButton, aboutButton;
 
     @FXML
-    private Button p01btn01;
+    private Button subButton01;
 
     @FXML
-    private TextField p01field;
+    private TextField subField01;
 
     @FXML
-    private TextArea p01area;
+    private TextArea subArea01;
 
     @FXML
     private ImageView imageView;
@@ -60,8 +60,8 @@ public class MainController {
     private void resetButtonAction(){
         switch(MainApp.getSubStage()){
             case 1:
-                p01field.setText("");
-                p01area.setText("");
+                subField01.setText("");
+                subArea01.setText("");
                 break;
             case 2:
                 break;
@@ -175,7 +175,7 @@ public class MainController {
     // Secondary Programs' Execution Buttons ---------------------------------------------------
     public void p01reverse(){
         // Split User Input Into Separate Words to a String Array
-        String[] userinput = p01field.getText().split("\\s+");
+        String[] userinput = subField01.getText().split("\\s+");
 
         // Reverse Traversal of String Array and Appending to String Variable
         String output = "";
@@ -184,7 +184,7 @@ public class MainController {
         }
 
         // Output String Variable Value to Text Area
-        p01area.setText(output);
+        subArea01.setText(output);
     }
 
     // Load Secondary Programs' Windows
