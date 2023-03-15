@@ -9,6 +9,7 @@ import java.io.IOException;
 public class MainApp extends Application {
 
     private static Stage MainStage;
+    private static int SubStage;
 
     // Initialize and Display Main Window
     @Override
@@ -29,6 +30,14 @@ public class MainApp extends Application {
 
     private void setMainStage(Stage mainstage){
         MainStage = mainstage;
+    }
+
+    public static int getSubStage(){
+        return SubStage;
+    }
+
+    public static void setSubStage(int currStage){
+        SubStage = currStage;
     }
 
     public static void main(String[] args) {

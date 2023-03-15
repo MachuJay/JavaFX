@@ -3,23 +3,56 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Button?>
-
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
 <VBox alignment="center" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml" fx:controller="stuff.MainController"
       maxHeight="Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="168.0" prefWidth="600.0">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0"/>
+        <Insets top="20.0" bottom="20.0" left="20.0" right="20.0"/>
     </padding>
+
+    <ImageView fx:id="imageView"
+               fitHeight="200.0"
+               fitWidth="200.0"
+               layoutX="61.0"
+               layoutY="83.0"
+               pickOnBounds="true"
+               preserveRatio="true"
+               GridPane.rowIndex="0"
+               GridPane.columnIndex="1"
+               GridPane.columnSpan="3"
+               GridPane.halignment="CENTER">
+        <Image url="@/sub01.png" />
+    </ImageView>
 
     <Label text="Enter a phrase:" />
 
     <TextField fx:id="p01field"/>
 
-    <Button fx:id="btn01" onAction="#prog01"
-        text="Reverse"/>
+    <GridPane>
+        <columnConstraints>
+            <ColumnConstraints percentWidth="33.0" hgrow="ALWAYS" />
+            <ColumnConstraints percentWidth="33.0" prefWidth="100.0" hgrow="ALWAYS" />
+            <ColumnConstraints percentWidth="34.0" hgrow="ALWAYS" />
+        </columnConstraints>
+        <Button fx:id="resetButton" onAction="#resetButtonAction"
+                text="Clear"
+                GridPane.halignment="LEFT"
+                GridPane.columnSpan="1"
+                GridPane.columnIndex="0"/>
+        <Button fx:id="p01btn01" onAction="#p01reverse"
+                text="Reverse"
+                GridPane.halignment="CENTER"
+                GridPane.columnSpan="1"
+                GridPane.columnIndex="1"/>
+    </GridPane>
 
     <TextArea fx:id="p01area"
         editable="false"
