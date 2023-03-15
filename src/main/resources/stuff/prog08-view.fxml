@@ -2,16 +2,72 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="stuff.MainController">
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<VBox alignment="center" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml" fx:controller="stuff.MainController"
+      maxHeight="Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="168.0" prefWidth="800.0">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets top="20.0" bottom="20.0" left="20.0" right="20.0"/>
     </padding>
 
-    <Button fx:id="btn01" text="Word Reversal" onAction="#progWordReversal"/>
-    <Label text="Challenges taken from:https://www.codecademy.com/resources/blog/java-code-challenges-for-beginners/"/>
+    <ImageView fx:id="imageView"
+               fitHeight="200.0"
+               fitWidth="200.0"
+               layoutX="61.0"
+               layoutY="83.0"
+               pickOnBounds="true"
+               preserveRatio="true"
+               GridPane.rowIndex="0"
+               GridPane.columnIndex="1"
+               GridPane.columnSpan="3"
+               GridPane.halignment="CENTER">
+        <Image url="@/sub08.png" />
+    </ImageView>
+
+    <Label text="Enter a phrase:" />
+
+    <TextField fx:id="p01field"/>
+
+    <GridPane>
+        <columnConstraints>
+            <ColumnConstraints percentWidth="33.0" hgrow="ALWAYS" />
+            <ColumnConstraints percentWidth="33.0" prefWidth="100.0" hgrow="ALWAYS" />
+            <ColumnConstraints percentWidth="34.0" hgrow="ALWAYS" />
+        </columnConstraints>
+        <Button fx:id="p01btn01" onAction="#p01reverse"
+                text="Reverse"
+                GridPane.halignment="CENTER"
+                GridPane.columnSpan="1"
+                GridPane.columnIndex="1"/>
+        <Button fx:id="resetButton" onAction="#resetButtonAction"
+                text="Clear"
+                GridPane.halignment="RIGHT"
+                GridPane.columnSpan="1"
+                GridPane.columnIndex="2"/>
+    </GridPane>
+
+    <TextArea fx:id="p01area"
+              editable="false"
+              mouseTransparent="true"
+              focusTraversable="false"/>
+
+    <AnchorPane>
+        <Button fx:id="aboutButton" onAction="#aboutButtonAction"
+                text="About"
+                AnchorPane.bottomAnchor="0.0"
+                AnchorPane.leftAnchor="0.0"/>
+        <Button fx:id="closeButton" onAction="#closeButtonAction"
+                text="Back to Main Menu"
+                AnchorPane.bottomAnchor="0.0"
+                AnchorPane.rightAnchor="0.0"/>
+    </AnchorPane>
 
 </VBox>
