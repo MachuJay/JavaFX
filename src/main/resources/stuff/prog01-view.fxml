@@ -34,7 +34,7 @@
 
     <Label text="Enter a phrase:" />
 
-    <TextField fx:id="subField01"/>
+    <TextField fx:id="subField01" onAction="#OnEnter"/>
 
     <GridPane>
         <columnConstraints>

@@ -11,6 +11,8 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MainController {
 
@@ -24,7 +26,7 @@ public class MainController {
     private Button subButton01;
 
     @FXML
-    private TextField subField01;
+    private TextField subField01, subField02;
 
     @FXML
     private TextArea subArea01;
@@ -55,7 +57,7 @@ public class MainController {
         stage.close();
     }
 
-    // Reset Subprogram's Nodes
+    // Reset Subprogram's Nodes' Text Values
     @FXML
     private void resetButtonAction(){
         switch(MainApp.getSubStage()){
@@ -64,8 +66,10 @@ public class MainController {
                 subArea01.setText("");
                 break;
             case 2:
-                break;
             case 3:
+                subField01.setText("");
+                subField02.setText("");
+                subArea01.setText("");
                 break;
             case 4:
                 break;
@@ -84,7 +88,7 @@ public class MainController {
         }
     }
 
-    // Display Subprogram Context
+    // Display Subprogram Context -----------------------------------------------------------------
     @FXML
     private void aboutButtonAction(){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -172,22 +176,97 @@ public class MainController {
         alert.show();
     }
 
-    // Secondary Programs' Execution Buttons ---------------------------------------------------
+    // Secondary Programs' Execution Buttons ------------------------------------------------------
     public void p01reverse(){
         // Split User Input Into Separate Words to a String Array
-        String[] userinput = subField01.getText().split("\\s+");
+        String[] phraseinput = subField01.getText().split("[\\s+]");
 
         // Reverse Traversal of String Array and Appending to String Variable
         String output = "";
-        for (int x=userinput.length-1; x>=0; x--) {
-            output = output.concat(userinput[x] + " ");
+        for (int x=phraseinput.length-1; x>=0; x--) {
+            output = output.concat(phraseinput[x] + " ");
         }
 
         // Output String Variable Value to Text Area
         subArea01.setText(output);
     }
 
-    // Load Secondary Programs' Windows
+    public void p02find(){
+        // Split User Input Into Separate Words to a String Array and Retrieve Parsed Integer
+        String[] phraseinput = subField01.getText().split("[\\s+]");
+        int numinput = Integer.parseInt(subField02.getText().trim());
+
+        // Retrieve nth Element from String Array
+        String output = phraseinput[numinput-1];
+
+        // Output nth Word String Value
+        subArea01.setText("The nth word from your phrase is " + output);
+    }
+
+    public void p03search(){
+        // Retrieve User String Inputs
+        String phraseinput = subField01.getText().trim();
+        String stringinput = subField02.getText().trim();
+
+        // Check if at Least One Instance of the String Exists Within the Phrase
+        int instances = 0;
+        if (phraseinput.contains(stringinput) && !stringinput.isBlank()){
+            //
+            Matcher regex = Pattern.compile(stringinput).matcher(phraseinput);
+            while (regex.find()) {
+                instances++;
+            }
+        }
+
+        // Output Total Number of Instances Found
+        subArea01.setText("There are " + instances + " instance/s of the String");
+    }
+
+    public void p04anagram(){
+
+    }
+
+    public void p05pangram(){
+
+    }
+
+    public void p06numreverse(){
+
+    }
+
+    public void p07armstrong(){
+
+    }
+
+    public void p08maximize(){
+
+    }
+
+    public void p09checker(){
+
+    }
+
+    public void p10factorize(){
+
+    }
+
+    // Set ActionEvent for "Enter" Key User Input -------------------------------------------------
+    public void OnEnter(){
+        switch (MainApp.getSubStage()) {
+            case 1 -> p01reverse();
+            case 2 -> p02find();
+            case 3 -> p03search();
+            case 4 -> p04anagram();
+            case 5 -> p05pangram();
+            case 6 -> p06numreverse();
+            case 7 -> p07armstrong();
+            case 8 -> p08maximize();
+            case 9 -> p09checker();
+            case 10 -> p10factorize();
+        }
+    }
+
+    // Load Secondary Programs' Windows -----------------------------------------------------------
     @FXML
     private void load(String fxml, String title, int subStage) throws IOException {
         loadWindow(fxml, title, subStage);

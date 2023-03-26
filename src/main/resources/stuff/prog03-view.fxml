@@ -29,12 +29,16 @@
                GridPane.columnIndex="1"
                GridPane.columnSpan="3"
                GridPane.halignment="CENTER">
-        <Image url="@/sub03.png" />
+        <Image url="@/sub02.png" />
     </ImageView>
 
     <Label text="Enter a phrase:" />
 
-    <TextField fx:id="subField01"/>
+    <TextField fx:id="subField01" onAction="#OnEnter"/>
+
+    <Label text="Enter string to search for:" />
+
+    <TextField fx:id="subField02" onAction="#OnEnter"/>
 
     <GridPane>
         <columnConstraints>
@@ -42,8 +46,8 @@
             <ColumnConstraints percentWidth="33.0" prefWidth="100.0" hgrow="ALWAYS" />
             <ColumnConstraints percentWidth="34.0" hgrow="ALWAYS" />
         </columnConstraints>
-        <Button fx:id="subButton01" onAction="#p01reverse"
-                text="Reverse"
+        <Button fx:id="subButton01" onAction="#p03search"
+                text="Search string"
                 GridPane.halignment="CENTER"
                 GridPane.columnSpan="1"
                 GridPane.columnIndex="1"/>

@@ -12,6 +12,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
 
+<?import javafx.scene.layout.HBox?>
 <VBox alignment="center" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml" fx:controller="stuff.MainController"
       maxHeight="Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="168.0" prefWidth="800.0">
     <padding>
@@ -34,7 +35,12 @@
 
     <Label text="Enter a phrase:" />
 
-    <TextField fx:id="subField01"/>
+    <TextField fx:id="subField01" onAction="#OnEnter"/>
+
+    <HBox>
+        <Label text="Enter n number value:"/>
+        <TextField fx:id="subField02" onAction="#OnEnter"/>
+    </HBox>
 
     <GridPane>
         <columnConstraints>
@@ -42,8 +48,8 @@
             <ColumnConstraints percentWidth="33.0" prefWidth="100.0" hgrow="ALWAYS" />
             <ColumnConstraints percentWidth="34.0" hgrow="ALWAYS" />
         </columnConstraints>
-        <Button fx:id="subButton01" onAction="#p01reverse"
-                text="Reverse"
+        <Button fx:id="subButton01" onAction="#p02find"
+                text="Find nth word"
                 GridPane.halignment="CENTER"
                 GridPane.columnSpan="1"
                 GridPane.columnIndex="1"/>
